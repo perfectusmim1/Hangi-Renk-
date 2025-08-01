@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Görsel Analiz Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 Yapay Zeka Görsel Analiz Sistemi</h1>
+            <p>Görselleri analiz ederek kategorilendirme yapar</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <div class="upload-icon">📸</div>
+                        <h3>Görsel Yükleyin</h3>
+                        <p>Dosyayı buraya sürükleyin veya tıklayarak seçin</p>
+                        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                
+                <div class="preview-section" id="previewSection" style="display: none;">
+                    <img id="previewImage" alt="Yüklenen görsel">
+                    <div class="image-actions">
+                        <button id="analyzeBtn" class="btn btn-primary">🔍 Analiz Et</button>
+                        <button id="clearBtn" class="btn btn-secondary">🗑️ Temizle</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading-section" id="loadingSection" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p>Görsel analiz ediliyor...</p>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <div class="result-card">
+                    <div class="result-header">
+                        <h3>📊 Analiz Sonucu</h3>
+                    </div>
+                    <div class="result-body">
+                        <div class="result-badge" id="resultBadge"></div>
+                        <div class="result-details" id="resultDetails"></div>
+                        <div class="confidence-bar">
+                            <div class="confidence-label">Güven Skoru:</div>
+                            <div class="confidence-progress">
+                                <div class="confidence-fill" id="confidenceFill"></div>
+                            </div>
+                            <div class="confidence-value" id="confidenceValue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <div class="error-card">
+                    <div class="error-icon">⚠️</div>
+                    <h3>Hata Oluştu</h3>
+                    <p id="errorMessage"></p>
+                    <button id="retryBtn" class="btn btn-primary">🔄 Tekrar Dene</button>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Google Gemini AI</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
