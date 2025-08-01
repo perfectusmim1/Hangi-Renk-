@@ -1,5 +1,5 @@
 // API anahtarı ve yapılandırma
-const GEMINI_API_KEY = 'AIzaSyCNM6_vl5id46ju98-d9POX3fvnaBXA1xs';
+const GEMINI_API_KEY = '';
 const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
 
 // DOM elementleri
@@ -282,3 +282,4 @@ window.addEventListener('unhandledrejection', function(e) {
         showError('Bağlantı hatası. İnternet bağlantınızı kontrol edin.');
     }
 });
+
